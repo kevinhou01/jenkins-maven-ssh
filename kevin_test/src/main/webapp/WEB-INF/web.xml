@@ -15,7 +15,6 @@ http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
 	<display-name>Archetype Created Web Application</display-name>
 	<servlet>
 		<servlet-name>LoginServlet</servlet-name>
-		<!-- 全类名：包和类全部要写 -->
 		<servlet-class> com.test.kevin_test.LoginServlet</servlet-class>
 	</servlet>
 	<servlet-mapping>

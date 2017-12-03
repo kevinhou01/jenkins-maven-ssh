@@ -9,7 +9,6 @@
 <body>
     <fieldset>
         <legend>user login</legend> <br />
-        <!-- form 表单的action 属性值要和配置在web.xml文件中的servlet的url-pattern相同 -->
         <form action="loginServlet" method="post" name="login">
             username:<input type="text" name="username" /> <br /> <br /> 
             password:<input type="password" name="password" /> <br /> <br /> 
