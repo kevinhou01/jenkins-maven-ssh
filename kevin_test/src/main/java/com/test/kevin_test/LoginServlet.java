@@ -18,7 +18,7 @@ public class LoginServlet extends HttpServlet {
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         //设置编码格式，可以防止乱码出现
-        response.setContentType("text/html; charset=UTF-8");
+        //response.setContentType("text/html; charset=UTF-8");
         //response.setCharacterEncoding("utf-8");
         //request.setCharacterEncoding("utf-8");
         //获取用户提交过来的用户名和密码，是通过表单中input的name属性获取的
