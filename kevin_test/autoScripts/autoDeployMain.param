@@ -1,0 +1,4 @@
+ACTION=deploy
+JMX_PORT=8061
+CONTAINER_NAME="kevintest"
+AUTODIR="/home/kevinhou/autodeploy"

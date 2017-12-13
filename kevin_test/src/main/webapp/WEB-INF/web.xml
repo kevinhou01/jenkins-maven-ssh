@@ -15,7 +15,7 @@ http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
 	<display-name>Archetype Created Web Application</display-name>
 	<servlet>
 		<servlet-name>LoginServlet</servlet-name>
-		<servlet-class> com.test.kevin_test.LoginServlet</servlet-class>
+		<servlet-class>com.test.kevin_test.LoginServlet</servlet-class>
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>LoginServlet</servlet-name>

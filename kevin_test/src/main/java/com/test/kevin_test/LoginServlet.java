@@ -16,9 +16,7 @@ public class LoginServlet extends HttpServlet {
     }
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        //response.setContentType("text/html; charset=UTF-8");
-        //response.setCharacterEncoding("utf-8");
-        //request.setCharacterEncoding("utf-8");
+
         String username = request.getParameter("username");
         String password = request.getParameter("password");
         
@@ -26,14 +24,10 @@ public class LoginServlet extends HttpServlet {
         PrintWriter pw = response.getWriter();
         if("admin".equals(username) && "123".equals(password)){
             pw.write("login success");
-            /*
-             */
 //            request.getRequestDispatcher("success.jsp").forward(request, response);;
 //            response.sendRedirect("success.jsp");
         }else{
             pw.write("login fail");
-            /*
-             */
 //            request.getRequestDispatcher("fail.jsp").forward(request, response);;
 //            response.sendRedirect("fail.jsp");
         }
