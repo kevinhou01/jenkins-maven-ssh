@@ -1,4 +1,5 @@
 ACTION=deploy
+PORT=9080
 JMX_PORT=8061
 CONTAINER_NAME="kevintest"
 AUTODIR="/home/kevinhou/autodeploy"

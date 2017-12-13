@@ -100,12 +100,9 @@ start_container(){
 	fi
 	
 	#JMX_PORT is needed by net host mode, bridge mode does not need it(default 8061)
-	docker run -d --net host -e PORT=8000 -e JMX_PORT=$JMX_PORT --name="$CONTAINER_NAME" \
-		-v /applog/kevintest_web:/dcosweb/logs:rw  \
-		-v /home/dcos/hosts/slave:/dcosweb/fabu/slave:rw  \
-		-v /home/dcos/.ssh:/home/dcos/.ssh:rw \
+	docker run -d --net host -e PORT=$PORT -e JMX_PORT=$JMX_PORT --name="$CONTAINER_NAME" \
+		-v /home/kevinhou/.ssh:/home/kevinhou/.ssh:rw \
 		-v $AUTODIR:/data/apps:rw \
-		-v /home/dcos/hosts/cfg.json:/dcosweb/json_cfg/cfg.json:rw  \
 		$BASEIMAGE  
 	
 	###check if the ontainer is started successfully or not
