@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html ng-app="my_app">
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="~/Scripts/angular.min.js"></script>
+    <script type="text/javascript">
+        var app = angular.module("my_app", []);
+        app.controller('my_controller', function ($scope) {
+            $scope.students = [
+                    { id: 1, name: '张一' },
+                    { id: 2, name: '李二' },
+                    { id: 3, name: '王三' },
+                    { id: 4, name: '马四' },
+                    { id: 5, name: '鬼五' }
+            ];
+            $scope.getStudent = function (id) {
+                alert(id);
+            }
+        });
+        app.run(function ($timeout) {//等待AngularJS加载完成之后触发事件
+            var a = $timeout(function () {
+                alert($('table tr').length);
+            }, 1000);
+        });
+    </script>
+</head>
+<body ng-controller="my_controller">
+    <table>
+        <tr>
+            <th>id</th>
+            <th>name</th>
+        </tr>
+        <tr ng-repeat="item in students">
+            <td>{{item.id}}</td>
+            <td><a href="#" ng-click="getStudent(item.id);">{{item.name}}</a></td>
+        </tr>
+    </table>
+</body>
+</html>  
